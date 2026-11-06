@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRUSH STORE 💗</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff5f8;
+  color: #38283e;
+}
+
+header {
+  background: #392942;
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.open {
+  color: #b7f5c9;
+  font-size: 12px;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px 45px;
+  background: linear-gradient(135deg,#f9dce8,#eee1ff);
+}
+
+.hero .tag {
+  background: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  color: #a14e7b;
+}
+
+.hero h1 {
+  font-size: clamp(30px,6vw,48px);
+  margin: 22px 0 10px;
+}
+
+.hero p {
+  color: #76677c;
+  line-height: 1.7;
+}
+
+button {
+  border: none;
+  background: #d96e9b;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+}
+
+button:hover {
+  background: #b94e7d;
+  transform: translateY(-2px);
+}
+
+.hero button {
+  margin-top: 24px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.heading p {
+  color: #88798d;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  padding: 23px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 22px #39294210;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .emoji {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #88798d;
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 40px;
+}
+
+.card button {
+  margin-top: 17px;
+  width: 100%;
+}
+
+.panel {
+  display: none;
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 20px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 5px 22px #39294210;
+  animation: show .35s ease;
+}
+
+.panel h2 {
+  margin-bottom: 12px;
+}
+
+.panel p {
+  color: #76677c;
+  line-height: 1.8;
+}
+
+.moods {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.moods button {
+  background: #f8e5ed;
+  color: #79465e;
+  font-size: 23px;
+  padding: 12px 18px;
+}
+
+.moods button:hover,
+.moods button.selected {
+  background: #d96e9b;
+  color: white;
+}
+
+.result {
+  background: #fff0f5;
+  padding: 18px;
+  border-radius: 14px;
+  margin-top: 18px;
+  line-height: 1.7;
+  display: none;
+}
+
+.gift {
+  font-size: 85px;
+  cursor: pointer;
+  margin: 20px;
+  display: inline-block;
+  transition: .3s;
+}
+
+.gift:hover {
+  transform: rotate(-10deg) scale(1.12);
+}
+
+.secret {
+  background: linear-gradient(135deg,#fbe1ec,#eee1ff);
+}
+
+.letter {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 20px;
+  line-height: 2;
+  display: none;
+}
+
+.chocolate {
+  font-size: 65px;
+  margin: 15px;
+}
+
+footer {
+  background: #392942;
+  color: #eadce9;
+  text-align: center;
+  padding: 25px;
+  font-size: 12px;
+  line-height: 2;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:500px) {
+  header {
+    padding: 18px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SRUSH STORE 💗</div>
+  <div class="open">● OPEN 24/7</div>
+</header>
+
+<section class="hero">
+
+  <span class="tag">THE OFFICIAL UNOFFICIAL HAPPINESS STORE</span>
+
+  <h1>Hey Madam! 🎀</h1>
+
+  <p>
+    Your mood called.
+    <br>
+    Apparently, it needs technical support. 😭
+    <br>
+    Welcome to your personal happiness department.
+  </p>
+
+  <button onclick="document.getElementById('departments').scrollIntoView({behavior:'smooth'})">
+    Explore Store ✨
+  </button>
+
+</section>
+
+<main class="container" id="departments">
+
+  <div class="heading">
+    <h2>Choose Your Department 🛍️</h2>
+    <p>We don't guarantee solutions, but we do guarantee entertainment.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- MOOD SCANNER -->
+
+    <div class="card">
+      <div class="emoji">🔮</div>
+      <h3>Mood Scanner</h3>
+      <p>Let's see what kind of situation we're dealing with.</p>
+      <button onclick="openPanel('mood')">Scan My Mood</button>
+    </div>
+
+    <!-- MYSTERY BOX -->
+
+    <div class="card">
+      <div class="emoji">🎁</div>
+      <h3>Mystery Box</h3>
+      <p>Something is waiting. No refunds if it's silly.</p>
+      <button onclick="openPanel('mystery')">Unlock Surprise</button>
+    </div>
+
+    <!-- CHOCOLATE GENERATOR -->
+
+    <div class="card">
+      <div class="emoji">🍫</div>
+      <h3>Chocolate Generator</h3>
+      <p>Because chocolate is always a valid answer.</p>
+      <button onclick="openPanel('chocolate')">Get Chocolate</button>
+    </div>
+
+    <!-- SECRET LETTER -->
+
+    <div class="card">
+      <div class="emoji">💌</div>
+      <h3>Secret Letter</h3>
+      <p>A little something is waiting for you.</p>
+      <button onclick="openPanel('letter')">Open Letter</button>
+    </div>
+
+    <!-- COMFORT CORNER -->
+
+    <div class="card">
+      <div class="emoji">🧸</div>
+      <h3>Comfort Corner</h3>
+      <p>For emergency hugs and absolutely zero judgement.</p>
+      <button onclick="openPanel('comfort')">Enter Corner</button>
+    </div>
+
+  </div>
+
+  <!-- MOOD SCANNER -->
+
+  <section class="panel" id="mood">
+
+    <h2>🔮 Mood Scanner</h2>
+    <p>Select your current mood, madam.</p>
+
+    <div class="moods">
+      <button onclick="scan('cry')">😭</button>
+      <button onclick="scan('angry')">😒</button>
+      <button onclick="scan('sleepy')">😴</button>
+      <button onclick="scan('happy')">😌</button>
+      <button onclick="scan('hungry')">🤤</button>
+    </div>
+
+    <div class="result" id="moodResult"></div>
+
+  </section>
+
+  <!-- MYSTERY BOX -->
+
+  <section class="panel" id="mystery">
+
+    <h2>🎁 Mystery Gift Box</h2>
+    <p>Click the gift to reveal your surprise!</p>
+
+    <div class="gift" onclick="openGift()">🎁</div>
+
+    <div class="result" id="giftResult"></div>
+
+  </section>
+
+  <!-- CHOCOLATE GENERATOR -->
+
+  <section class="panel" id="chocolate">
+
+    <h2>🍫 Chocolate Generator</h2>
+    <p>Generating your daily happiness...</p>
+
+    <div class="chocolate">🍫</div>
+
+    <button onclick="generateChocolate()">
+      Generate Chocolate
+    </button>
+
+    <div class="result" id="chocoResult"></div>
+
+  </section>
+
+  <!-- SECRET LETTER -->
+
+  <section class="panel secret" id="letter">
+
+    <h2>💌 A Secret Letter</h2>
+    <p>Looks like someone left a message for you.</p>
+
+    <button onclick="openLetter()" style="margin-top:20px">
+      Open Envelope 💗
+    </button>
+
+    <div class="letter" id="letterContent">
+
+      <h2>Just a little something...</h2>
+
+      <p>
+        Door hone ka ek hi nuksaan hai,
+        <br>
+        warna ab tak KitKat aur Dairy Milk tumhare paas hoti 😂🍫
+      </p>
+
+      <p>
+        Chalo filhaal virtual shopping kar lo,
+        <br>
+        asli wali kabhi baad mein 😭
+      </p>
+
+      <p>Hope you feel better soon! 🫶🏻</p>
+
+    </div>
+
+  </section>
+
+  <!-- COMFORT CORNER -->
+
+  <section class="panel" id="comfort">
+
+    <h2>🧸 Comfort Corner</h2>
+
+    <div style="font-size:75px;margin:20px">🧸</div>
+
+    <p>
+      Official rules of this corner:
+      <br><br>
+      1. No unnecessary stress.
+      <br>
+      2. Chocolates are always welcome.
+      <br>
+      3. Rest is not laziness.
+      <br>
+      4. Nobody is allowed to annoy you today.
+      <br><br>
+      Rule number 4 may not be technically enforceable. 😂
+    </p>
+
+  </section>
+
+</main>
+
+<footer>
+  <h3>SRUSH STORE 💗</h3>
+  Happiness department | Friendship edition
+  <br>
+  No bugs guaranteed. No promises about the owner. 😂
+</footer>
+
+<script>
+
+// OPEN ONE DEPARTMENT AT A TIME
+
+function openPanel(id) {
+
+  document.querySelectorAll('.panel').forEach(panel => {
+    panel.style.display = 'none';
+  });
+
+  const selected = document.getElementById(id);
+
+  selected.style.display = 'block';
+
+  selected.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+
+}
+
+// MOOD SCANNER
+
+function scan(mood) {
+
+  const messages = {
+
+    cry: "ERROR 404: Happiness not found. Recommended treatment: KitKat + blanket + ignoring annoying people. 😭",
+
+    angry: "WARNING: Attitude.exe is running at maximum capacity. Everyone maintain a safe distance. 😂",
+
+    sleepy: "System running on 2% battery. Please connect to pillow immediately. 😴",
+
+    happy: "System working perfectly! Please don't install unnecessary drama. 😌",
+
+    hungry: "Critical alert: Stomach.exe requires immediate chocolate and snacks. 🍫"
+
+  };
+
+  const result = document.getElementById('moodResult');
+
+  result.innerHTML = messages[mood];
+
+  result.style.display = 'block';
+
+}
+
+// MYSTERY BOX
+
+const gifts = [
+
+  "🎁 You won unlimited chocolate privileges! 🍫",
+
+  "🧸 Congratulations! Your imaginary teddy is ready for duty.",
+
+  "🍟 Emergency snack subscription activated.",
+
+  "💗 You unlocked a lifetime supply of random nonsense.",
+
+  "😂 You won absolutely nothing. But at least you clicked."
+
+];
+
+function openGift() {
+
+  const gift = gifts[Math.floor(Math.random() * gifts.length)];
+
+  const result = document.getElementById('giftResult');
+
+  result.innerHTML = gift;
+
+  result.style.display = 'block';
+
+  document.querySelector('.gift').innerText = '🎀';
+
+}
+
+// CHOCOLATE GENERATOR
+
+const chocolates = [
+
+  "KitKat 🍫 - Take a break from everything.",
+
+  "Dairy Milk 💜 - Instant happiness subscription.",
+
+  "Ferrero Rocher ✨ - Madam deserves premium treatment.",
+
+  "Five Star 🍫 - Eat it and disappear into your own world.",
+
+  "Chocolate cake 🍰 - Because one chocolate is never enough."
+
+];
+
+function generateChocolate() {
+
+  const random = chocolates[
+    Math.floor(Math.random() * chocolates.length)
+  ];
+
+  const result = document.getElementById('chocoResult');
+
+  result.innerHTML = "Your chocolate is: <br><br>" + random;
+
+  result.style.display = 'block';
+
+}
+
+// SECRET LETTER
+
+function openLetter() {
+
+  const letter = document.getElementById('letterContent');
+
+  letter.style.display = 'block';
+
+  letter.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+
+}
+
+</script>
+
+</body>
+</html>
